@@ -128,18 +128,18 @@ For more, please refer [Quality Gates Documentation](https://docs.sonarsource.co
 **Environment Setup**
 
 1. Install the necessary plugins
-   1.1 Git plugin
-   1.2 Maven Integration plugin
-   1.3 SonarQube Scanner
+   - Git plugin
+   - Maven Integration plugin
+   - SonarQube Scanner
 
 2. Create a new Jenkins pipeline:
-    2.1 In Jenkins, create a new pipeline job and configure it with the GitHub repository (https://github.com/kcheth/Shopping-cart for the Java application.)
-    2.2 Add a Jenkinsfile to the repository to define the pipeline stages.
+    - In Jenkins, create a new pipeline job and configure it with the GitHub repository https://github.com/kcheth/Shopping-cart for the Java application.
+    - Add a Jenkinsfile to the repository to define the pipeline stages.
 
 3. Define the pipeline stages:
-    Stage 1: Checkout the source code from Git.
-    Stage 2: Build the Java application using Maven.
-    Stage 3: Run SonarQube analysis to check the code quality.
+    - Stage 1: Checkout the source code from Git.
+    - Stage 2: Build the Java application using Maven.
+    - Stage 3: Run SonarQube analysis to check the code quality.
 
 Jenkinsfile stored in GitHub
 ```
