@@ -85,7 +85,7 @@ Once you access SonarQube, the first step involves importing a project. You can 
    
 On this page, you can view a comprehensive list of projects, offering options for creating a new project, along with various filtering capabilities.
 
-For more, please refer [link](https://docs.sonarsource.com/sonarqube/latest/project-administration/creating-and-importing-projects/)
+For more, please refer [Official Documentation](https://docs.sonarsource.com/sonarqube/latest/project-administration/creating-and-importing-projects/)
 
 ![image](https://github.com/kcheth/SonarQube-Guide/assets/106922418/1782c363-df54-4c1a-aa12-fd58b23c2dff)
 
@@ -93,8 +93,94 @@ For more, please refer [link](https://docs.sonarsource.com/sonarqube/latest/proj
    
 The "Issues" page provides a detailed overview of code-related problems, also known as issues or violations, within your software projects. These issues can include code smells, bugs, security vulnerabilities, and other areas where the code might not adhere to best practices or coding standards.
 
-For more, please refer [link](https://docs.sonarsource.com/sonarqube/latest/user-guide/issues/#:~:text=Issues-,Overview,issues%20(new%20technical%20debt).)
+For more, please refer [Official Documentation](https://docs.sonarsource.com/sonarqube/latest/user-guide/issues/#:~:text=Issues-,Overview,issues%20(new%20technical%20debt).)
 
 ![image](https://github.com/kcheth/SonarQube-Guide/assets/106922418/e0b5b9c0-e716-4c38-85e1-2b6ab181dc49)
 
+3. **Rules** :
 
+SonarQube executes rules on source code to generate issues. It has more than 5,000 rules that are regularly updated and enhanced for more than 30 of the most popular and widely used languages and frameworks.
+
+For more, please refer [Official Documenation](https://docs.sonarsource.com/sonarqube/9.8/user-guide/rules/overview/)
+
+![image](https://github.com/kcheth/SonarQube-Guide/assets/106922418/4dc616ad-9348-452e-8cb1-4041fadfe96e)
+
+4. **Quality Profiles** :
+Quality profiles are a key part of your SonarQube configuration. They define the set of rules to be applied during code analysis.
+
+Every project has a quality profile set for each supported language. When a project is analyzed, SonarQube determines which languages are used and uses the active quality profile for each of those languages in that specific project.
+
+For more, please refer [Quality Profiles Documentation](https://docs.sonarsource.com/sonarqube/latest/instance-administration/quality-profiles/)
+
+5. **Quality Gates** :
+
+Quality Gates in SonarQube are a set of predefined criteria or conditions that a project must meet before it can be considered of acceptable quality. These gates serve as a checkpoint during the development and analysis process, ensuring that certain quality standards are met before allowing the project to proceed further.
+
+For more, please refer [Quality Gates Documentation](https://docs.sonarsource.com/sonarqube/latest/user-guide/quality-gates/)
+
+![image](https://github.com/kcheth/SonarQube-Guide/assets/106922418/e2cbf832-0efd-4831-b3d7-d78064951087)
+
+### Run a sample application on SonarQube for code analysis
+**Prerequisites:**
+- Java application code hosted on a repository
+- Jenkins server
+
+**Environment Setup**
+
+1. Install the necessary plugins
+   1.1 Git plugin
+   1.2 Maven Integration plugin
+   1.3 SonarQube Scanner
+
+2. Create a new Jenkins pipeline:
+    2.1 In Jenkins, create a new pipeline job and configure it with the GitHub repository [URL](https://github.com/kcheth/Shopping-cart for the Java application.)
+    2.2 Add a Jenkinsfile to the repository to define the pipeline stages.
+
+3. Define the pipeline stages:
+    Stage 1: Checkout the source code from Git.
+    Stage 2: Build the Java application using Maven.
+    Stage 3: Run SonarQube analysis to check the code quality.
+
+Jenkinsfile stored in GitHub
+```
+pipeline {
+    agent any
+    tools{
+        jdk 'jdk11'
+        maven 'maven3'
+    }
+    
+    environment{
+        SCANNER_HOME= tool 'sonar-scanner'
+    }
+
+    stages {
+        stage('Git Checkout') {
+            steps {
+                git branch: 'main', changelog: false, credentialsId: '9f6d6649-facc-4222-acd4-7fadeb51ce05', poll: false, url: 'https://github.com/kcheth/Shopping-cart.git'
+            }
+        }
+        
+        stage('COMPILE') {
+            steps {
+                sh "mvn clean compile -DskipTests=True"
+            }
+        }
+        
+        stage('OWASP SCAN') {
+            steps {
+                dependencyCheck additionalArguments: '--scan ./ ', odcInstallation: 'DP'
+                dependencyCheckPublisher pattern: '**/dependency-check-report.xml'
+            }
+        }
+        
+        stage('Sonarqube') {
+            steps {
+                withSonarQubeEnv('sonar-server') {
+                    sh "mvn sonar:sonar"
+                }
+            }
+        }
+    }
+}
+```
