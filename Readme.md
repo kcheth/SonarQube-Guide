@@ -133,7 +133,7 @@ For more, please refer [Quality Gates Documentation](https://docs.sonarsource.co
    1.3 SonarQube Scanner
 
 2. Create a new Jenkins pipeline:
-    2.1 In Jenkins, create a new pipeline job and configure it with the GitHub repository [URL](https://github.com/kcheth/Shopping-cart for the Java application.)
+    2.1 In Jenkins, create a new pipeline job and configure it with the GitHub repository (https://github.com/kcheth/Shopping-cart for the Java application.)
     2.2 Add a Jenkinsfile to the repository to define the pipeline stages.
 
 3. Define the pipeline stages:
