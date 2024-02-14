@@ -64,7 +64,7 @@ WRAPPER_CONF="${SONAR_HOME}/conf/wrapper.conf"
 PIDDIR="/opt/sonarqube-9.9.3.79811/"
 ```
 
-After completing this step, when attempting to enable/start the service, you may encounter an issue related to systemd while trying to run SonarQube as a system service using a service manager like systemd. In such a scenario, please refer to the document (https://docs.sonarsource.com/sonarqube/9.9/setup-and-upgrade/configure-and-operate-a-server/operating-the-server/)
+After completing this step, when attempting to enable/start the service, you may encounter an issue related to systemd while trying to run SonarQube as a system service using a service manager like systemd. In such a scenario, please refer to the document [Running SonarQube as a service on Linux with systemd ](https://docs.sonarsource.com/sonarqube/9.9/setup-and-upgrade/configure-and-operate-a-server/operating-the-server/)
 
 On a Unix system using systemd, you can install SonarQube as a service. You cannot run SonarQube as root in Unix systems. Ideally, you will have created a new account dedicated to the purpose of running SonarQube. Let's suppose:
 - The user used to start the service is `sonar`
