@@ -1,4 +1,5 @@
-![image](https://github.com/kcheth/SonarQube-Guide/assets/106922418/fe696904-7683-42fd-b175-463d5c311b34)# SonarQube
+# SonarQube
+
 SonarQube is a Code Quality Assurance tool that collects and analyzes source code, and provides reports for the code quality of your project. 
 
 It combines static and dynamic analysis tools and enables quality to be measured continually over time. Everything from minor styling choices, to design errors are inspected and evaluated by SonarQube. This provides users with a rich searchable history of the code to analyze where the code is messing up and determine whether or not it is styling issues, code defeats, code duplication, lack of test coverage, or excessively complex code. The software will analyze source code from different aspects and drills down the code layer by layer, moving module level down to the class level, with each level producing metric values and statistics that should reveal problematic areas in the source code that needs improvement.
