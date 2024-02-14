@@ -1,4 +1,4 @@
-# SonarQube
+![image](https://github.com/kcheth/SonarQube-Guide/assets/106922418/fe696904-7683-42fd-b175-463d5c311b34)# SonarQube
 SonarQube is a Code Quality Assurance tool that collects and analyzes source code, and provides reports for the code quality of your project. 
 
 It combines static and dynamic analysis tools and enables quality to be measured continually over time. Everything from minor styling choices, to design errors are inspected and evaluated by SonarQube. This provides users with a rich searchable history of the code to analyze where the code is messing up and determine whether or not it is styling issues, code defeats, code duplication, lack of test coverage, or excessively complex code. The software will analyze source code from different aspects and drills down the code layer by layer, moving module level down to the class level, with each level producing metric values and statistics that should reveal problematic areas in the source code that needs improvement.
@@ -184,3 +184,43 @@ pipeline {
     }
 }
 ```
+
+Execute the Jenkins pipeline to initiate a comprehensive process outlined in the Jenkinsfile. This process involves retrieving code from the GitHub repository, fetching dependencies specified in the pom.xml file using Maven, creating a package through Maven, and performing a code analysis using SonarQube.
+
+![image](https://github.com/kcheth/SonarQube-Guide/assets/106922418/7f60e7df-5b6b-4493-8e10-03f48ce2a047)
+
+Verify the SonarQube platform to examine the pipeline results, assessing the code analysis conducted throughout the pipeline execution.
+
+![image](https://github.com/kcheth/SonarQube-Guide/assets/106922418/1ffb291a-9c8f-4736-9cf0-d3048e5f6f83)
+
+Based on the results presented above, here is a comprehensive analysis of each parameter:
+
+1. ### Bugs (1 Issue):
+
+This category represents code issues that are likely to cause runtime errors or unexpected behavior in your application. Addressing this bug will improve code stability.
+
+2. ### Vulnerabilities (1 Issue): 
+
+Vulnerabilities indicate potential security risks in your code that could be exploited by attackers. It's crucial to fix vulnerabilities to protect your application from security threats.
+
+3. ### Code Smells (8 Issues):
+
+Code smells represent areas of code that may not be technically incorrect but could benefit from improvement. Addressing code smells enhances code readability and maintainability.
+
+4. ### Hotspots Reviewed (0 Issues):
+
+Hotspots are typically complex or critical parts of your codebase. The absence of reviewed hotspots suggests that there may be areas of code that require further attention and analysis.
+
+5. ### Coverage (0%):
+
+Code coverage measures how much of your code is tested. A 0% coverage indicates that none of your code is currently tested. Consider adding tests to improve code quality.
+
+6. ### Duplications (0%):
+
+This result signifies that there were no instances of duplicated code blocks within the scanned codebase.
+
+7. ### Lines of Code (825 Lines):
+
+This metric indicates the total number of lines in your application's source code. Understanding your codebase's size helps in managing and maintaining it effectively.
+
+Upon selecting the project in the image above, you can view an analysis of the entire code in the image below.
