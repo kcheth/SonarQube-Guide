@@ -54,6 +54,6 @@ Please refer the document installation.md for full installation
 
 - Find the community version of SonarQube that you want to use on Docker Hub:[SonarQube - Official Image | Docker Hub](https://hub.docker.com/_/sonarqube/)
 - Start the server by running:
-'docker run -d --name sonarqube -p 9000:9000 <image name>'
+- 'docker run -d --name sonarqube -p 9000:9000 <image name>'
 - Login to http://localhost:9000 with the following credentials for system admin: (admin/admin)
 
