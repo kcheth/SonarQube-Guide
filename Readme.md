@@ -78,6 +78,21 @@ Once you are logged into sonarqube, to analyze a project follow the following st
 ## Tool Walk Through
 
 Once you access SonarQube, the first step involves importing a project. You can either create a project manually within SonarQube or import it directly from various DevOps platforms, including GitHub and Bitbucket, leveraging SonarQube's seamless integration capabilities. After setting up your projects, navigate to the 'Projects' tab, as shown below, to view a high-level overview of the health of each project in your organization.
+
 ![image](https://github.com/kcheth/SonarQube-Guide/assets/106922418/9cb49948-c5bd-4100-80c3-c716098420dd)
+
+1. **Projects**
+On this page, you can view a comprehensive list of projects, offering options for creating a new project, along with various filtering capabilities.
+
+For more, please refer [link](https://docs.sonarsource.com/sonarqube/latest/project-administration/creating-and-importing-projects/)
+
+![image](https://github.com/kcheth/SonarQube-Guide/assets/106922418/1782c363-df54-4c1a-aa12-fd58b23c2dff)
+
+2. **Issues**
+The "Issues" page provides a detailed overview of code-related problems, also known as issues or violations, within your software projects. These issues can include code smells, bugs, security vulnerabilities, and other areas where the code might not adhere to best practices or coding standards.
+
+For more, please refer [link](https://docs.sonarsource.com/sonarqube/latest/user-guide/issues/#:~:text=Issues-,Overview,issues%20(new%20technical%20debt).)
+
+![image](https://github.com/kcheth/SonarQube-Guide/assets/106922418/e0b5b9c0-e716-4c38-85e1-2b6ab181dc49)
 
 
