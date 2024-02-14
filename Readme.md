@@ -78,5 +78,5 @@ Once you are logged into sonarqube, to analyze a project follow the following st
 ## Tool Walk Through
 
 Once you access SonarQube, the first step involves importing a project. You can either create a project manually within SonarQube or import it directly from various DevOps platforms, including GitHub and Bitbucket, leveraging SonarQube's seamless integration capabilities. After setting up your projects, navigate to the 'Projects' tab, as shown below, to view a high-level overview of the health of each project in your organization.
-![alt text](blob:https://cloudzenix.atlassian.net/63aab85a-2a9f-437b-9116-5e395a9f6f8c#media-blob-url=true&id=efb8c03e-3482-450c-a9c3-9a30f22dd242&collection=contentId-2015068253&contextId=2015068253&height=643&width=1287&alt=)
+![alt text](https://www.google.com/url?sa=i&url=https%3A%2F%2Fcommunity.sonarsource.com%2Ft%2Fput-back-previously-accepted-issues-on-sonarqube%2F62552&psig=AOvVaw2x-BxPJom9xcOh10svFae-&ust=1707985299024000&source=images&cd=vfe&opi=89978449&ved=0CBMQjRxqFwoTCPCL_JmzqoQDFQAAAAAdAAAAABAI)
 
