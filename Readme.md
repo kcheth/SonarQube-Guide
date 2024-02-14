@@ -195,32 +195,45 @@ Verify the SonarQube platform to examine the pipeline results, assessing the cod
 
 Based on the results presented above, here is a comprehensive analysis of each parameter:
 
-1. ### Bugs (1 Issue):
+1. #### Bugs (1 Issue):
 
 This category represents code issues that are likely to cause runtime errors or unexpected behavior in your application. Addressing this bug will improve code stability.
 
-2. ### Vulnerabilities (1 Issue): 
+2. #### Vulnerabilities (1 Issue): 
 
 Vulnerabilities indicate potential security risks in your code that could be exploited by attackers. It's crucial to fix vulnerabilities to protect your application from security threats.
 
-3. ### Code Smells (8 Issues):
+3. #### Code Smells (8 Issues):
 
 Code smells represent areas of code that may not be technically incorrect but could benefit from improvement. Addressing code smells enhances code readability and maintainability.
 
-4. ### Hotspots Reviewed (0 Issues):
+4. #### Hotspots Reviewed (0 Issues):
 
 Hotspots are typically complex or critical parts of your codebase. The absence of reviewed hotspots suggests that there may be areas of code that require further attention and analysis.
 
-5. ### Coverage (0%):
+5. #### Coverage (0%):
 
 Code coverage measures how much of your code is tested. A 0% coverage indicates that none of your code is currently tested. Consider adding tests to improve code quality.
 
-6. ### Duplications (0%):
+6. #### Duplications (0%):
 
 This result signifies that there were no instances of duplicated code blocks within the scanned codebase.
 
-7. ### Lines of Code (825 Lines):
+7. #### Lines of Code (825 Lines):
 
 This metric indicates the total number of lines in your application's source code. Understanding your codebase's size helps in managing and maintaining it effectively.
 
 Upon selecting the project in the image above, you can view an analysis of the entire code in the image below.
+
+![image](https://github.com/kcheth/SonarQube-Guide/assets/106922418/5e188ca2-0257-46e3-a95b-a31398ef12e6)
+
+After SonarQube analysis, if a DevOps engineer identifies errors or the pipeline results show failures, the typical next steps involve addressing and fixing the issues in the code. This may include collaborating with developers to resolve bugs, vulnerabilities, or code smells, and making necessary improvements to meet coding standards. 
+
+Once the issues are addressed, the code can be retested and the pipeline rerun to ensure a successful and clean build. The iterative process continues until the code meets quality standards and can be deployed confidently.
+
+### Conclusion
+
+SonarQube stands as a powerful ally in ensuring code quality, security, and maintainability. From comprehensive static code analysis and issue detection to customizable rules and automated quality gates, SonarQube empowers development teams to foster a culture of continuous improvement. By providing actionable insights and fostering adherence to best practices, SonarQube plays a vital role in elevating the overall software development life-cycle, resulting in more reliable and efficient software projects.
+
+
+
