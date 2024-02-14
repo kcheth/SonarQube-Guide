@@ -46,15 +46,37 @@ To analyze a project locally, you can install SonarQube using either a zip file,
 
 #### Getting SonarQube from a Zip file
 
-You can download the SonarQube community edition zip file from here:[Download | SonarQube](https://www.sonarsource.com/products/sonarqube/downloads/)
+You can download the SonarQube community edition zip file from here: [Download | SonarQube](https://www.sonarsource.com/products/sonarqube/downloads/)
 
 Please refer the document installation.md for full installation 
 
 #### Getting SonarQube from Docker Image
 
-- Find the community version of SonarQube that you want to use on Docker Hub:[SonarQube - Official Image | Docker Hub](https://hub.docker.com/_/sonarqube/)
+- Find the community version of SonarQube that you want to use on Docker Hub: [SonarQube - Official Image | Docker Hub](https://hub.docker.com/_/sonarqube/)
 - Start the server by running:
   > docker run -d --name sonarqube -p 9000:9000 <image name>
- 
 - Login to http://localhost:9000 with the following credentials for system admin: (admin/admin)
+
+#### Analyzing a project with SonarQube
+
+Once you are logged into sonarqube, to analyze a project follow the following steps:
+
+- Click "Create a Local project"
+
+- Provide a Project display name and Project key for your project, then proceed to the next step.
+
+- Choose the baseline for new code in your project.
+
+- Under the "Analysis method," select "Locally."
+
+- Generate a token for your project and proceed by clicking "Continue."
+
+- Specify your project's main language under "Run analysis on your project."
+
+- Select your project’s main language under Run analysis on your project, and follow the instructions to analyze your project. Here you’ll download and execute a Scanner on your code (if you’re using Maven or Gradle, the Scanner is automatically downloaded).
+
+## Tool Walk Through
+
+Once you access SonarQube, the first step involves importing a project. You can either create a project manually within SonarQube or import it directly from various DevOps platforms, including GitHub and Bitbucket, leveraging SonarQube's seamless integration capabilities. After setting up your projects, navigate to the 'Projects' tab, as shown below, to view a high-level overview of the health of each project in your organization.
+![alt text](blob:https://cloudzenix.atlassian.net/63aab85a-2a9f-437b-9116-5e395a9f6f8c#media-blob-url=true&id=efb8c03e-3482-450c-a9c3-9a30f22dd242&collection=contentId-2015068253&contextId=2015068253&height=643&width=1287&alt=)
 
